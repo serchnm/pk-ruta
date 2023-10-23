@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pk-ruta/static/css/main.073c9b0a.css",
-    "main.js": "/pk-ruta/static/js/main.5f301aa4.js",
-    "static/js/787.eb57c4dc.chunk.js": "/pk-ruta/static/js/787.eb57c4dc.chunk.js",
-    "static/media/logo.svg": "/pk-ruta/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/pk-ruta/index.html",
-    "main.073c9b0a.css.map": "/pk-ruta/static/css/main.073c9b0a.css.map",
-    "main.5f301aa4.js.map": "/pk-ruta/static/js/main.5f301aa4.js.map",
-    "787.eb57c4dc.chunk.js.map": "/pk-ruta/static/js/787.eb57c4dc.chunk.js.map"
+    "main.css": "/pk-ruta/build/static/css/main.073c9b0a.css",
+    "main.js": "/pk-ruta/build/static/js/main.7c089a7c.js",
+    "static/js/787.eb57c4dc.chunk.js": "/pk-ruta/build/static/js/787.eb57c4dc.chunk.js",
+    "static/media/logo.svg": "/pk-ruta/build/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pk-ruta/build/index.html",
+    "main.073c9b0a.css.map": "/pk-ruta/build/static/css/main.073c9b0a.css.map",
+    "main.7c089a7c.js.map": "/pk-ruta/build/static/js/main.7c089a7c.js.map",
+    "787.eb57c4dc.chunk.js.map": "/pk-ruta/build/static/js/787.eb57c4dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.5f301aa4.js"
+    "static/js/main.7c089a7c.js"
   ]
 }
