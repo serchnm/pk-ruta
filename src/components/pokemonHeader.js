@@ -2,7 +2,9 @@ import React from 'react'
 
 const pokemonHeader = () => {
   return (
-    <div>Choose your Pokemon</div>
+    <div className='title is-4 text-camel-case'>
+      <p>Choose your Pokemon</p>
+    </div>
   )
 }
 

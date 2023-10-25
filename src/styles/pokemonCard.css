@@ -11,6 +11,11 @@
 
 .pkm-card-body {
   margin-top: 50px;
+  box-shadow: 10px 15px teal;
+}
+
+.text-camel-case {
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 768px) {
