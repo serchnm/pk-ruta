@@ -10,7 +10,8 @@
 }
 
 .pkm-card-body {
-  margin-top: 50px;
+  margin-top: 0px;
+  margin-bottom: 60px;
   box-shadow: 10px 15px teal;
 }
 

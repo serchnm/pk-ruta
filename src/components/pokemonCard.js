@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import pokemonData from '../utils/pokemonAPI';
 import '../styles/pokemonCard.css';
 
-const PokemonCard = ({ data }) => {
+const PokemonCard = ({ data, myKey }) => {
   const [loading, setLoading] = useState(true);
   const [listData, setListData] = useState([]);
 
@@ -16,18 +16,30 @@ const PokemonCard = ({ data }) => {
     .then(res => {
       setLoading(false);
       setListData(res.data);
-      console.log(res.data);
+      //console.log(res.data);
     })
     .catch(console.error);
   },[]);
 
+  const pokemonSpriteChange = () => {
+    const pkmImgSrc = document.getElementById(`${data}-img-pkm`);
+    const pkmKey = document.getElementById(data).id;
+
+    if(pkmImgSrc.src === listData.sprites.front_default && pkmKey === data) {
+      pkmImgSrc.src = listData.sprites.back_default;
+    }
+    else {
+      pkmImgSrc.src = listData.sprites.front_default;
+    }
+  }
+
   return (
     loading ? <p>...</p> :(
-    <div className="container pkm-card-body">
+    <div className="container pkm-card-body" index={myKey} id={data}>
       <div className="card">
         <div className="card-content">
           <div className='pkm-img-container'>
-            <img className='pkm-img' src={listData ? listData.sprites.back_default : ''} alt='pkm' />
+            <img id={`${data}-img-pkm`} className='pkm-img' onClick={pokemonSpriteChange} src={listData ? listData.sprites.front_default : ''} alt='pkm' />
           </div>
           <div className="media">
             <div className="media-content">
@@ -37,28 +49,26 @@ const PokemonCard = ({ data }) => {
           </div>
           <div className="content">
             <br/>
-            <div class="level">
-              <div class="level-item has-text-centered">
+            <div className="level">
+              <div className="level-item has-text-centered">
                 <div>
-                  <p class="heading">Height</p>
-                  <p class="heading">{listData.height}</p>
+                  <p className="heading">Height</p>
+                  <p className="heading">{listData.height}</p>
                 </div>
               </div>
-              <div class="level-item has-text-centered">
+              <div className="level-item has-text-centered">
                 <div>
-                  <p class="heading">Weight</p>
-                  <p class="heading">{listData.weight}</p>
+                  <p className="heading">Weight</p>
+                  <p className="heading">{listData.weight}</p>
                 </div>
               </div>
-              <div class="level-item has-text-centered">
+              <div className="level-item has-text-centered">
                 <div>
-                  <p class="heading">Abilities</p>
-                  <p class="heading">{listData.abilities[0].ability.name}</p>
+                  <p className="heading">Abilities</p>
+                  <p className="heading">{listData.abilities[0].ability.name}</p>
                 </div>
               </div>
             </div>
-       
-            {/* <p>{data ? data.data.id : ''}</p> */}
           </div>
         </div>
       </div>
