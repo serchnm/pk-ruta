@@ -3,21 +3,25 @@ import 'bulma/css/bulma.css';
 import PokemonCard from './components/pokemonCard';
 import PokemonHeader from './components/pokemonHeader';
 import Menu from './components/menu';
+import Link from './components/link';
+import Route from './components/route';
+import PokedexView from './views/pokedex';
 
 function App() {
   const pokemonList = ['pikachu', 'charmander', 'squirtle', 'snorlax', 'alakazam'];
 
   const pokemonObject = pokemonList.map((data, index) => {
-    return <PokemonCard data={data} index={index} myKey={index} />;
+    return <PokemonCard data={data} key={index} myKey={index} />;
   })
 
   return (
     <div className="App App-background">
-      <PokemonHeader />
-      <div className='columns'>
-        <div className='column is-one-fifth'><Menu /></div>
+      <PokemonHeader key="headerComponent" />
+      <Route path="/pokedex"><PokedexView/></Route>
+      <Route path="/"><div className='columns'>
+        <div className='column is-one-fifth'><Menu key="menuComponent" /></div>
         <div className='column is-three-fifths'>{pokemonObject}</div>
-      </div>
+      </div></Route>
     </div>
   );
 }

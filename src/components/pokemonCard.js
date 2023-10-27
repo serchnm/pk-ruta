@@ -16,7 +16,7 @@ const PokemonCard = ({ data, myKey }) => {
     .then(res => {
       setLoading(false);
       setListData(res.data);
-      //console.log(res.data);
+      console.log(res.data);
     })
     .catch(console.error);
   },[]);

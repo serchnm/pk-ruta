@@ -3,13 +3,13 @@ import React from 'react'
 const menu = () => {
   return (
     <div>
-      <aside class="menu">
-        <p class="menu-label">
+      <aside className="menu">
+        <p className="menu-label">
           General
         </p>
-        <ul class="menu-list">
-          <li><a>Dashboard</a></li>
-          <li><a>Customers</a></li>
+        <ul className="menu-list">
+          <li><a href='/'>Dashboard</a></li>
+          <li><a href='/pokedex'>Pokedex</a></li>
         </ul>
       </aside>
     </div>
