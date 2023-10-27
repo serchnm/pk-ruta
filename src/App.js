@@ -17,8 +17,8 @@ function App() {
   return (
     <div className="App App-background">
       <PokemonHeader key="headerComponent" />
-      <Route path="/pokedex"><PokedexView/></Route>
-      <Route path="/"><div className='columns'>
+      <Route path="/pk-ruta/pokedex"><PokedexView/></Route>
+      <Route path="/pk-ruta"><div className='columns'>
         <div className='column is-one-fifth'><Menu key="menuComponent" /></div>
         <div className='column is-three-fifths'>{pokemonObject}</div>
       </div></Route>
