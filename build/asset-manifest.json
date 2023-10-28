@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pk-ruta/build/static/css/main.f93db97e.css",
-    "main.js": "/pk-ruta/build/static/js/main.ecef8d39.js",
+    "main.css": "/pk-ruta/build/static/css/main.8c190ada.css",
+    "main.js": "/pk-ruta/build/static/js/main.14560367.js",
     "index.html": "/pk-ruta/build/index.html",
-    "main.f93db97e.css.map": "/pk-ruta/build/static/css/main.f93db97e.css.map",
-    "main.ecef8d39.js.map": "/pk-ruta/build/static/js/main.ecef8d39.js.map"
+    "main.8c190ada.css.map": "/pk-ruta/build/static/css/main.8c190ada.css.map",
+    "main.14560367.js.map": "/pk-ruta/build/static/js/main.14560367.js.map"
   },
   "entrypoints": [
-    "static/css/main.f93db97e.css",
-    "static/js/main.ecef8d39.js"
+    "static/css/main.8c190ada.css",
+    "static/js/main.14560367.js"
   ]
 }

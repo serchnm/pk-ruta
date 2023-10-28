@@ -1,6 +1,24 @@
-import React from 'react'
+import React from 'react';
+import Link from './link';
 
 const menu = () => {
+  const links = [
+    { label: 'Dashboard', path: '/pk-ruta/build' },
+    { label: 'Pokedex', path: '/pk-ruta/pokedex/build' },
+  ];
+  const renderedLinks = links.map((link) => {
+    return (
+      <li cla>
+        <Link 
+        key={link.label} 
+        to={link.path}  
+        activeClassName="is-active"
+      >
+          {link.label}
+        </Link>
+      </li>
+      )
+  });
   return (
     <div>
       <aside className="menu">
@@ -8,8 +26,7 @@ const menu = () => {
           General
         </p>
         <ul className="menu-list">
-          <li><a href='/'>Dashboard</a></li>
-          <li><a href='/pokedex'>Pokedex</a></li>
+          {renderedLinks}
         </ul>
       </aside>
     </div>

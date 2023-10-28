@@ -12,13 +12,13 @@ const PokemonCard = ({ data, myKey }) => {
       return resultData;
     }
 
-    const result = pikachuData()
+    pikachuData()
     .then(res => {
       setLoading(false);
       setListData(res.data);
-      console.log(res.data);
     })
     .catch(console.error);
+  // eslint-disable-next-line
   },[]);
 
   const pokemonSpriteChange = () => {
