@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from './link';
+import { NavLink } from 'react-router-dom';
+import '../styles/menu.scss';
 
 const menu = () => {
   const links = [
@@ -8,14 +9,13 @@ const menu = () => {
   ];
   const renderedLinks = links.map((link) => {
     return (
-      <li cla>
-        <Link 
-        key={link.label} 
+      <li key={link.label}>
+        <NavLink 
         to={link.path}  
-        activeClassName="is-active"
+        className={({ isActive }) => (isActive ? 'active' : 'inactive')}
       >
           {link.label}
-        </Link>
+        </NavLink>
       </li>
       )
   });

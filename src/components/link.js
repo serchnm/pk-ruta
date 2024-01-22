@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import NavigationContext from '../context/navigation';
 import classNames from 'classnames';
-import '../styles/link.css'
+// import '../styles/link.css'
 
 const Link = ({ to, children, className, activeClassName }) => {
   const { navigate, currentPath } = useContext(NavigationContext);
